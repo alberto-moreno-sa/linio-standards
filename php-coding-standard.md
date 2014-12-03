@@ -78,3 +78,4 @@ is placed in the start or the end of the string
 
 * Routes SHOULD be named by bundle, controller, action: `cart_index_update`
 * URI SHOULD follow the bundle structure and use dashes for word separation: `cart/index/update-product`
+* Services MUST be declared using yaml configuration
