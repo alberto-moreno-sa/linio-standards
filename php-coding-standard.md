@@ -1,4 +1,5 @@
-# Linio PHP Coding Standard
+Linio PHP Coding Standard
+-------------------------
 
 This guide extends and expands on [PSR-2], the PHP community coding standard.
 
@@ -10,10 +11,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
 interpreted as described in [RFC 2119].
 
-[RFC 2119]: http://www.ietf.org/rfc/rfc2119.txt
-[PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
-[PSR-1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
-[PSR-2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
+[RFC 2119](http://www.ietf.org/rfc/rfc2119.txt)
+[PSR-0](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md)
+[PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md)
+[PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
 
 ## Docblocks
 
@@ -74,5 +75,5 @@ is placed in the start or the end of the string
 
 ## Symfony
 
-* Routes SHOULD be named by bundle, controller, action: cart_index_update
-* URI SHOULD follow the bundle structure and use dashes for word separation: cart/index/update-product
+* Routes SHOULD be named by bundle, controller, action: `cart_index_update`
+* URI SHOULD follow the bundle structure and use dashes for word separation: `cart/index/update-product`
