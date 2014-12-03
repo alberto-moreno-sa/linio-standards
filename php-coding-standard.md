@@ -1,5 +1,4 @@
-Linio PHP Coding Standard
--------------------------
+# Linio PHP Coding Standard
 
 This guide extends and expands on [PSR-2], the PHP community coding standard.
 
@@ -16,8 +15,7 @@ interpreted as described in [RFC 2119].
 [PSR-1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
 [PSR-2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
 
-Docblocks
----------
+## Docblocks
 
 * Docblocks MUST use [phpDocumentor](http://www.phpdoc.org/) syntax
 * All method arguments MUST be documented
@@ -34,15 +32,13 @@ Docblocks
 * Inline comments MUST use double slashes
 * To-do comments MUST be placed where it will be implemented/called
 
-Namespace imports
------------------
+## Namespace imports
 
 * Code MUST use one use statement per line, MUST not use commas
 * Code MUST use aliases instead of full namespaces
 * Namespaces SHOULD be imported in the following order: Vendor, Framework, Project
 
-Strings
--------
+## Strings
 
 * Strings MUST always use single quotes
 * Concatenation MUST be done only by using the `sprintf()` function, unless the variable
@@ -50,21 +46,18 @@ is placed in the start or the end of the string
     * e.g: `'String interpolation: ' . $var
 * All SQL queries MUST be written inside double quoted strings
 
-Arrays
-------
+## Arrays
 
 * All declarations MUST use short syntax
 * A comma MUST be inserted at the last element, unless it is an inline array
 
-Getters and setters
--------------------
+## Getters and setters
 
 * MUST be grouped by respective property
 * MUST be declared in the order of their respective properties
 * MUST be placed at the end of the class
 
-Generic
--------
+## Generic
 
 * [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) SHOULD be used for autoloading
 * Code MUST ensure a new line before the return statement
@@ -78,3 +71,8 @@ Generic
 * The default value of a property SHOULD be placed in the class constructor
 * When binding parameters in `PDO`, you MUST use named parameters instead of numbered ones
 * `date()` function MUST NOT be used when manipulating dates, only outputting strings
+
+## Symfony
+
+* Routes SHOULD be named by bundle, controller, action: cart_index_update
+* URI SHOULD follow the bundle structure and use dashes for word separation: cart/index/update-product
