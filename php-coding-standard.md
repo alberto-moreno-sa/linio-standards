@@ -82,5 +82,5 @@ is placed in the start or the end of the string
 
 ## Database
 
-* Use plural words for table names
-* Use snake case for naming columns
+* You MUST use plural words for table names
+* You MUST use snake case for naming columns
