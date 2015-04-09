@@ -70,7 +70,7 @@ is placed in the start or the end of the string
 * Methods or properties MUST NOT be declared as private, use protected instead
 * Code MUST NOT use fluent interfaces, never return $this
 * Method calls SHOULD be used as arguments only when they have no parameters or don't throw exceptions
-* The default value of a property SHOULD be placed in the class constructor
+* The default value of a property SHOULD be placed in the class constructor, except if it's an entity
 * When binding parameters in `PDO`, you MUST use named parameters instead of numbered ones
 * `date()` function MUST NOT be used when manipulating dates, only outputting strings
 
