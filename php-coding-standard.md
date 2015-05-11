@@ -73,6 +73,7 @@ is placed in the start or the end of the string
 * The default value of a property SHOULD be placed in the class constructor, except if it's an entity
 * When binding parameters in `PDO`, you MUST use named parameters instead of numbered ones
 * `date()` function MUST NOT be used when manipulating dates, only outputting strings
+* You MUST NOT align values inside arrays, you MUST keep only one space between the arrow `=>` operator.
 
 ## Symfony
 
