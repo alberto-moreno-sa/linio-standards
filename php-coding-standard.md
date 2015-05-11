@@ -52,7 +52,7 @@ is placed in the start or the end of the string
 
 * All declarations MUST use short syntax
 * A comma MUST be inserted at the last element, unless it is an inline array
-* You MUST NOT align values inside arrays, you MUST keep only one space between the arrow `=>` operator
+* You MUST NOT align values inside arrays, you MUST keep only one space before and one space after the arrow `=>` operator
 
 ## Getters and setters
 
