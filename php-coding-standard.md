@@ -249,7 +249,7 @@ class User
 * When not using scalars, type hints MUST be used in method arguments
 * Code SHOULD NOT use fluent interfaces
 * Method calls SHOULD be used as arguments only when they have no parameters or don't throw exceptions
-* The default value of a property SHOULD be placed in the class constructor, except if it's an entity
+* The default value of a property SHOULD be set in the property if it is scalar. If it's non-scalar, it MUST be placed in the class constructor. If the property is scalar and the argument is optional in the constructor, the default value must be in both places. ***
 * When binding parameters in `PDO`, you MUST use named parameters instead of numbered ones
 * `date()` function MUST NOT be used when manipulating dates, only outputting strings
 * You SHOULD inject dependencies via the constructor EXCEPT when the majority of the class does not depend upon the majority of the dependencies.
