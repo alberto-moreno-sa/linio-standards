@@ -1,0 +1,18 @@
+#!/bin/bash
+
+PATH="/usr/local/bin:$PATH"
+
+if [[ ! -x $(which php-cs-fixer) ]]; then
+	echo "You must install php-cs-fixer in your \$PATH"
+	exit 1;
+fi
+
+php-cs-fixer fix --dry-run
+retval=$?
+
+if [[ $retval != 0 ]]; then
+	echo
+	echo "ERROR: You have styling errors in your code. You must fix them before commiting!"
+	echo
+	exit 1;
+fi
