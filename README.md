@@ -3,6 +3,12 @@ This repository serves to hold all of the documentation and utilities that Linio
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
+## Security
+### GitHub
+Linio uses GitHub for it's code hosting. For security purposes, all developers MUST enable 2FA (Two-Factor Authentication) on GitHub.
+
+If you do not currently have a OTP (One time password) client, such as [Authy](https://www.authy.com), or Google Authenticator, please take a look at [Authy](https://www.authy.com). It's available on Android, iOS, and Chrome.
+
 ## Warnings
 Included in the standards directory are multiple documents which MUST be adhered to. Straying away from these standards MAY result in disciplinary action.
 
