@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PATH="/usr/local/bin:$PATH"
+PATH="bin:vendor/bin:$HOME/.composer/vendor/bin:/usr/local/bin:$PATH"
 
 if [[ ! -x $(which php-cs-fixer) ]]; then
 	echo "You must install php-cs-fixer in your \$PATH"
