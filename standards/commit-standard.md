@@ -5,9 +5,6 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
 interpreted as described in [RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
 
-## Flow
-A code repository MUST use git flow once it has reached a stage in which a feature branch can be developed without heavily depending upon another.
-
 ## Commit Contents
 A commit SHOULD be a specific set of related changes. Commits MUST be able to be reverted without causing other problems.
 
