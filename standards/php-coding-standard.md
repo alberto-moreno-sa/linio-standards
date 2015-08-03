@@ -23,10 +23,10 @@ interpreted as described in [RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
 * Docblocks MUST use [phpDocumentor](http://www.phpdoc.org/) syntax
 * All methods must have a docblock
 * The docblock MUST be laid out in the following format: message, annotations, parameter definitions, return definition, exception definitions
-```
+```php
 /**
  * This method does something.
- * 
+ *
  * @Annotation()
  * @Annotation()
  *
@@ -67,8 +67,8 @@ $variable = ...;
 * Variables should be descriptive (e.g. $userId not $key, $user not $value)
 
 ## Newlines
-* A newline SHOULD be placed before and after a code block
-```
+* A newline SHOULD be placed before and after a code block.
+```php
 public function method()
 {
     $var = false;
@@ -76,19 +76,19 @@ public function method()
     if ($var === true) {
         $this->doSomething();
     }
-    
+
     $this->doSomethingElse();
 }
 ```
 * A newline SHOULD be placed after declaring a variable and any business logic.
-```
+```php
 $var = new Something();
 
 $var->doSomething();
 $var->doSomethingElse();
 ```
 * A newline MUST be placed between immediately unrelated business logic.
-```
+```php
 $this->handle(new Something());
 
 $this->addFlash('success', 'Some Message');
@@ -111,38 +111,45 @@ is placed in the start or the end of the string
 
 ## Classes
 
-* Prefixes/suffixes SHOULD be used in class names
-* Methods or properties MUST NOT be declared as private, use protected instead
+* Prefixes/suffixes SHOULD NOT be used in class names, including traits and interfaces in most cases. Instead, try to use namespaces and descriptive class names. This helps to keep classes aligned with a single responsibility.
+    * Examples:
+        * `CompileUserPermissions` instead of `UserPermissionService`
+        * `CastsToJson` instead of `JsonInterface`
+    * Exceptions to this include exceptions, and also classes like repositories, where the class name cannot realistically be named to be understandable on it's own.
+        * Exceptions MUST end in `Exception` (e.g. `InvalidArgumentException`)
+    * Another exception are traits who's main purpose is to make dependency injection reusable, such as `SessionAware`.
+* Methods and property visibility SHOULD be declared as protected in libraries.
+    * In your application specific code, it is up to the project lead to define the standard.
 * The order of the class MUST be: traits, constants, properties, constructor, destructor, getters and setters, magic methods, business logic
 * Getters and setters MUST be grouped by respective property
 * Getters and setters MUST be declared in the order of their respective properties
 
-```
+```php
 class User
 {
     const PASSWORD_EXPIRATION_LENGTH = 3;
     const TYPE_ADMIN = 'admin';
-    
+
     /**
      * @var string
      */
     private $type;
-    
+
     /**
      * @var string
      */
     private $name;
-    
+
     /**
      * @var string
      */
     private $email;
-    
+
     /**
      * @var bool
      */
     private $enabled = true;
-    
+
     /**
      * @param string $name
      * @param string $email
@@ -154,12 +161,12 @@ class User
         $this->email = $email;
         $this->enabled = true;
     }
-    
+
     public function __destruct()
     {
         // TODO: Implement __destruct()
     }
-    
+
     /**
      * @return string
      */
@@ -167,7 +174,7 @@ class User
     {
         return $this->name;
     }
-    
+
     /**
      * @param string $name
      */
@@ -175,7 +182,7 @@ class User
     {
         $this->name = $name;
     }
-    
+
     /**
      * @return string
      */
@@ -183,7 +190,7 @@ class User
     {
         return $this->email;
     }
-    
+
     /**
      * @param string $email
      */
@@ -191,7 +198,7 @@ class User
     {
         $this->email = $email;
     }
-    
+
     /**
      * @return bool
      */
@@ -199,7 +206,7 @@ class User
     {
         return $this->enabled;
     }
-    
+
     /**
      * @param bool $enabled
      */
@@ -207,7 +214,7 @@ class User
     {
         $this->enabled = $enabled;
     }
-    
+
     /**
      * @return string
      */
@@ -215,7 +222,7 @@ class User
     {
         return $this->name;
     }
-    
+
     /**
      * @param string $attribute
      *
@@ -225,7 +232,7 @@ class User
     {
         return isset($this->$attribute) ? $this->$attribute : null;
     }
-    
+
     /**
      * @param string $attribute
      * @param mixed $value
@@ -234,7 +241,7 @@ class User
     {
         $this->$attribute = $value;
     }
-    
+
     public function something()
     {
         // TODO: Implement something()
