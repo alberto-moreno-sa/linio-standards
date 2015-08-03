@@ -115,7 +115,8 @@ is placed in the start or the end of the string
     * Examples:
         * `CompileUserPermissions` instead of `UserPermissionService`
         * `CastsToJson` instead of `JsonInterface`
-    * Exceptions to this include classes like repositories, where the class name cannot realistically be named to be understandable on it's own.
+    * Exceptions to this include exceptions, and also classes like repositories, where the class name cannot realistically be named to be understandable on it's own.
+        * Exceptions MUST end in `Exception` (e.g. `InvalidArgumentException`)
     * Another exception are traits who's main purpose is to make dependency injection reusable, such as `SessionAware`.
 * Methods and property visibility SHOULD be declared as protected in libraries.
     * In your application specific code, it is up to the project lead to define the standard.
