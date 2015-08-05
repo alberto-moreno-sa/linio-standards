@@ -13,10 +13,7 @@ A commit message MUST be in the past tense, and in the form of a complete senten
 
 An example is `Removed deprecated actions in SomeController.`
 
-The reason for this is the commit history MUST be usable, but does not REQUIRED to be used, as a changelog. Messages such as `Merge`, `Updated X`, etc., do not describe what was changed.
-
-### Issue Prefix
-If the project you are working on is using a project management software (e.g. Jira), the commits MUST be prefixed with the issue related to it. An example is `[PROJ-1234] Added cart items to customer session.`.
+The reason for this is the commit history MUST be usable, but does not REQUIRED to be used, as a changelog. Messages such as `Merge`, `Updated SomeClass.`, etc., do not describe what was changed.
 
 ## When to Commit?
 ### Frequency
@@ -29,7 +26,9 @@ You MUST commit and push all of your changes before you leave for the end of the
 A branch SHOULD NOT be merged unless all tests pass. If a test fails, but falls out of the scope of the branch, it should be discussed with the team lead as to whether or not to fix it inside the current branch.
 
 ## How do I merge?
-You SHOULD submit a pull request if you are at the stage where your code is completed, you have reviewed it yourself, and all tests pass.
+You SHOULD submit a pull request if you are at the stage where your code is completed, you have reviewed it yourself, and all tests pass. If you do need to have an open discussion about something in progress, you MUST prefix the pull request with `[WIP]`. 
+
+You MUST put the issue prefix in the pull request title though (e.g. `[PROJ-1234] Added cart items to customer session.`)
 
 ## Prefix Reference
 - [WIP] - Work in Progress (e.g. `[WIP] Added delete action to UserController.`)
