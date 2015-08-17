@@ -9,7 +9,7 @@ interpreted as described in [RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
 A commit SHOULD be a specific set of related changes. Commits MUST be able to be reverted without causing other problems.
 
 ## Messages
-A commit message MUST be in the past tense, and in the form of a complete sentence. The limit for the commit message is 50 characters. If you need to extend beyond 50 characters, you MUST use a secondary message, otherwise known as the body.
+A commit message MUST be in the past tense, and in the form of a complete sentence (including punctuation). If you need to include more information, you MUST use a secondary message, also known as the "body". While there is no limit to the title message (first), you MUST not go beyond a single sentence, and it SHOULD follow proper English grammar.
 
 An example is `Removed deprecated actions in SomeController.`
 
