@@ -22,7 +22,7 @@ interpreted as described in [RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
 
 * Docblocks MUST use [phpDocumentor](http://www.phpdoc.org/) syntax
 * All methods must have a docblock
-* The docblock MUST be laid out in the following format: message, annotations, parameter definitions, return definition, exception definitions
+* The docblock MUST be laid out in the following format: message, annotations, parameter definitions, exception definitions, return definition
 ```php
 /**
  * This method does something.
@@ -33,11 +33,11 @@ interpreted as described in [RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
  * @param Type $variable
  * @param Type $variable2
  *
- * @return Type1|Type2
- *
  * @throws InvalidArgumentException
  * @throws InvalidArgumentException
  * @throws SomeOtherException
+ *
+ * @return Type1|Type2
  */
 ```
 * The previously defined sections MUST be separated by a newline
