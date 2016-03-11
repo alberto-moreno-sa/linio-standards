@@ -9,11 +9,27 @@ interpreted as described in [RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
 A commit SHOULD be a specific set of related changes. Commits MUST be able to be reverted without causing other problems.
 
 ## Messages
-A commit message MUST be in the past tense, and in the form of a complete sentence (including punctuation). If you need to include more information, you MUST use a secondary message, also known as the "body". While there is no limit to the title message (first), you MUST not go beyond a single sentence, and it SHOULD follow proper English grammar.
+The first line of a commit message, also known as the "subject", MUST be a single complete sentence. The sentence
+SHOULD NOT be longer than 50 characters. If you need to include more information, you MUST use a secondary message,
+also known as the "body". The body SHOULD follow proper English grammar, and lines SHOULD NOT exceed 72 characters.
 
-An example is `Removed deprecated actions in SomeController.`
+Example:
 
-The reason for this is the commit history MUST be usable, but does not REQUIRED to be used, as a changelog. Messages such as `Merge`, `Updated SomeClass.`, etc., do not describe what was changed.
+```
+Disallow mocking of nonexistent methods
+
+Mocking nonexistent methods is a potentially dangerous default of
+Mockery. If a collaborator method is removed or renamed, unit tests will
+continue to pass, but actual code will fail. By disallowing mocking of
+nonexistent methods, this guarantees that a test will fail if a mocked
+method disappears in a a collaborator.
+
+Note that we can still mock nonexistent methods if we need to, but this
+should be limited to cases where there is absolutely no other way.
+```
+
+The reason for this is to make commit histories easy to scan visually as one-line messages. If the gist of a change
+cannot be communicated on the first line, that ability is lost.
 
 ### Issue Prefix
 If the project you are working on is using a project management software (e.g. Jira), the commits MAY be prefixed with the issue related to it. An example is `[PROJ-1234] Added cart items to customer session.`. It is up to your project lead to determine if this prefix MUST be used or not.
@@ -36,3 +52,8 @@ You MUST put the issue prefix in the pull request title though (e.g. `[PROJ-1234
 ## Prefix Reference
 - [WIP] - Work in Progress (e.g. `[WIP] Added delete action to UserController.`)
 - [ISSUE] - Issue related to the commit (e.g. `[PROJ-1234] Added cart items to customer session.`)
+
+## Tools
+A project MAY provide a [commit template](http://codeinthehole.com/writing/a-useful-template-for-commit-messages/) file
+to help developers remember the format. A developer MAY use the [Fit Commit](https://github.com/m1foley/fit-commit) hook
+to validate commit messages.
