@@ -44,7 +44,7 @@ interpreted as described in [RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
     * The method does not directly throw any exceptions.
     * The method does not have any annotations.
     * Every method parameter includes a typehint, or the method accepts no parameters.
-    * The method declares a return type.
+    * The method declares a return type, or the method returns no value.
     * A reasonable person could deduce the method's purpose knowing only its name, class, and parameters.
         * e.g. `__invoke()` within a class called `RegisterUser`, `hash` with a value object parameter of type `Password`, `__construct` within any class.
 * All method arguments MUST be documented
