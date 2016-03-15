@@ -21,7 +21,6 @@ interpreted as described in [RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
 ## Docblocks and Comments
 
 * Docblocks MUST use [phpDocumentor](http://www.phpdoc.org/) syntax
-* All methods must have a docblock
 * The docblock MUST be laid out in the following format: message, annotations, parameter definitions, exception definitions, return definition
 ```php
 /**
@@ -41,6 +40,13 @@ interpreted as described in [RFC 2119](http://www.ietf.org/rfc/rfc2119.txt).
  */
 ```
 * The previously defined sections MUST be separated by a newline
+* All methods MUST have a docblock, unless _all_ of the following conditions are true, in which case the entire docblock is OPTIONAL:
+    * The method does not directly throw any exceptions.
+    * The method does not have any annotations.
+    * Every method parameter includes a typehint, or the method accepts no parameters.
+    * The method declares a return type, or the method returns no value.
+    * A reasonable person could deduce the method's purpose knowing only its name, class, and parameters.
+        * e.g. `__invoke()` within a class called `RegisterUser`, `hash` with a value object parameter of type `Password`, `__construct` within any class.
 * All method arguments MUST be documented
 * All docblocks that are inherited should use `{@inheritdoc}`
 * Redundant commentaries SHOULD be avoided
