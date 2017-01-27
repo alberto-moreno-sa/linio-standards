@@ -42,10 +42,8 @@ You SHOULD be committing frequently. This does not mean you need to commit every
 You MUST commit and push all of your changes before you leave for the end of the day. If something happens to your laptop or you, the company should not lose access to any changes that were in progress. If you have a work in progress commit, you MUST prefix your commit message with `[WIP]`. An example is `[WIP] Added delete action to UserController.`.
 
 ## Branch History
-You SHOULD squash all related changes to a single commit. Commits such as `[WIP]`, `Added return type`, etc.,
-SHOULD be combined so as to keep the history clean. While developing it is fine to have these, but once a PR is submitted,
-the branch is considered to be ready for production. We do not want to pollute fixed branches such as master with commits
-make a larger history, especially as these are meaningless commits once a PR is complete.
+You MAY (OPTIONAL) be squash all related changes to a single commit. Commits such as `[WIP]`, `Added return type`, etc.,
+MAY be combined so as to keep the history clean. The decision to enforce or prohibit this is on a per project basis.
 
 ## Can it be merged?
 A branch SHOULD NOT be merged unless all tests pass. If a test fails, but falls out of the scope of the branch, it should be discussed with the team lead as to whether or not to fix it inside the current branch.
