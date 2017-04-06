@@ -44,7 +44,7 @@ You MUST commit and push all of your changes before you leave for the end of the
 ## Branch History
 You MAY NOT squash changes in a PR for internal projects. DO NOT squash changes for our open source projects unless asked to do so. Squashing removes our ability to see what has been changed during a PR.
 
-You also MAY NOT, unless otherwise specified, ammend a commit and force push it once a PR has been opened.
+You also MAY NOT, unless otherwise specified, amend a commit and force push it once a PR has been opened.
 
 ## Can it be merged?
 A branch SHOULD NOT be merged unless all tests pass. If a test fails, but falls out of the scope of the branch, it should be discussed with the team lead as to whether or not to fix it inside the current branch.
