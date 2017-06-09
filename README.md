@@ -38,10 +38,10 @@ This directory contains misc. configuration files for various utilities such as 
 
 ## Standards
 
-### [Commit Standards](standards/commit-standard.md)
+### [Commit Standards](standards/commit.md)
 This file documents standards that all Linio developers MUST adhere to for the utilization of Git.
 
-### [PHP Coding Standards](standards/php-coding-standard.md)
+### [PHP Coding Standards](standards/php.md)
 This file documents standards that ALL Linio PHP code MUST adhere to.
 
 ### [Javascript Coding Standards](https://github.com/airbnb/javascript)
