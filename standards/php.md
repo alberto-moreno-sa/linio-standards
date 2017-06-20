@@ -138,7 +138,7 @@ is placed in the start or the end of the string
 * Constants MUST have visibility declared.
 * Methods and property visibility SHOULD be declared as protected in libraries.
     * In your application specific code, it is up to the project lead to define the standard.
-* The order of the class MUST be: traits, constants, properties, dependency injection setters, constructor, destructor, getters/setters, public methods, protected methods, private methods.
+* The RECOMMENDED order of class elements is: traits, constants, properties, constructor, destructor, getters/setters, public methods, protected methods, private methods.
 * Getters and setters MUST be grouped by respective property.
 * Getters and setters MUST be declared in the order of their respective properties.
 * All properties should have a sane default if one can be provided (E.g. a list should have an empty array).
