@@ -44,5 +44,5 @@ This file documents standards that all Linio developers MUST adhere to for the u
 ### [PHP Coding Standards](standards/php.md)
 This file documents standards that ALL Linio PHP code MUST adhere to.
 
-### [Javascript Coding Standards](https://github.com/airbnb/javascript)
-This file documents standards that ALL Linio Javascript code MUST adhere to.
+### [JavaScript Coding Standards](https://github.com/airbnb/javascript)
+This file documents standards that ALL Linio JavaScript code MUST adhere to.
