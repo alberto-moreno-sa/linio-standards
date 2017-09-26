@@ -46,15 +46,15 @@ You MAY NOT squash changes in a PR for internal projects. DO NOT squash changes 
 
 You also MAY NOT, unless otherwise specified, amend a commit and force push it once a PR has been opened.
 
-## When create a Pull Request?
+## When to create a Pull Request?
 
-- When you’ve got a small change, potentially in a part of the codebase outside your area of expertise, and you’d like someone with more experience to provide a quick.
+- When you’ve got a small change, potentially in a part of the codebase outside your area of expertise, and you’d like someone with more experience to provide a quick check before it merge.
 
 - When you’ve started a new feature, or bug fix, that’s not quite ready for others to review, but you want to let your teammates know that you’re working on the feature. This can be used to prevent the duplication of effort, save work that you’ve started, or complement your team’s workflow.
 
 - When you want feedback on your general approach or the idea itself. Is this a dumb idea? Is there a better way to do this? The content of the pull request exists to convey the idea, and will likely not be the final implementation. This may start as a WIP and may end with a line-by-line review.
 
-- When you’re ready to ship the thing. It may have been started as a work in progress, or for early feedback, but you’ve made it clear that unless you hear otherwise, it is going to hit merge.
+- When you’re ready to ship the thing. It may have been started as a work in progress, or for early feedback, but you’ve made it clear that unless you hear otherwise, it will be merged.
 
 ## Can it be merged?
 A branch SHOULD NOT be merged unless all tests pass. If a test fails, but falls out of the scope of the branch, it should be discussed with the team lead as to whether or not to fix it inside the current branch.
